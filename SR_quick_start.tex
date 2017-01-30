@@ -1,0 +1,341 @@
+\documentclass[a4paper,english,10pt]{article}
+
+\usepackage[applemac]{inputenc}		% french special caracters (é, è, à, ...)
+\usepackage[pdftex]{graphicx}				% to include figure in the document
+\usepackage[footnotesize]{caption}      	% caption of table and figure in footnote size
+\usepackage{color}                     			% texte en couleurs
+\usepackage{subfig}					% allow the use of subfigure in the figure environment
+\usepackage{fancyhdr}				% change header and footer
+\usepackage{hyperref} 				% make hyperref in the pdf document
+\usepackage{geometry}  				% change de geometry of the page
+%\usepackage{eurosym}				% use of euro symbol
+%\usepackage{floatflt}   				% for floating figure
+\usepackage{multicol}    			% multicolumn document
+\usepackage{multirow}    			% multicolumn document
+\usepackage[Glenn]{fncychap}            	% formatage des titres de chapitres
+%\usepackage{fancyvrb}                   		% pour afficher du code
+%\usepackage{amsmath}				% math package
+%\usepackage{sidecap}				% caption at le left or right side of the figures
+%\usepackage{lettrine} 				% emploi de lettrine au debut du chapitre
+\usepackage{fancyvrb}
+
+\geometry{a4paper,tmargin=3cm,bmargin=2.5cm,lmargin=4cm,rmargin=3cm}
+\pagestyle{headings}
+\fancyfoot[C]{  \thepage \ }
+\bibliographystyle{apalike}
+
+
+
+%==========================pour les images================================
+\graphicspath{{images/graphes/},{images/diagrammes/},
+{images/illustrations/}, {images/}}
+\DeclareGraphicsExtensions{.jpg,.png, .tiff, .pdf}
+
+%==========================numérotations==================================
+\setcounter{tocdepth}{3}                % affiche jusqu'aux susubsections dans toc
+\setcounter{secnumdepth}{3}             % chapitres et sections numrots
+\setlength{\tolerance}{1000}             % tolrance pour l'espace entre les mots
+
+%==========================pour les couleurs===============================
+\definecolor{coolSection}{RGB}{223,0,0}
+\definecolor{coolSubSection}{rgb}{0.2,0,0.5}
+\definecolor{coolGreen}{RGB}{22,109,15}
+\definecolor{red}{RGB}{255,0,0}
+
+
+%=======================en-tête et pieds de page==================================
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\leftmark}
+\fancyfoot[R]{\thepage}
+
+%==================== DOCUMENT =================================
+
+
+\begin{document}
+
+\title{
+\begin{figure}[!h]
+\includegraphics[width=\linewidth]{SmartRoot_logo}
+\end{figure}
+{\Huge Quick Start Guide}\\ \vspace{10mm}
+ How to install, setup and use SmartRoot
+ }
+\normalsize
+
+\maketitle
+
+\setcounter{tocdepth}{1}   
+\tableofcontents
+\vspace{10pt}
+\rule{0.9\linewidth}{1pt}
+\vspace{10pt}
+
+This small document presents briefly how to install, setup and use SmartRoot. \\
+
+For more detailed informations about SmartRoot, you might want to read either the User Guide\footnote{\url{www.uclouvain.be/en-smartroot}} or the related paper:\\
+
+\noindent \fbox{\parbox{\linewidth}{ \href{http://www.plantphysiol.org/content/early/2011/07/19/pp.111.179895.abstract}{Guillaume Lobet, Loïc Pagès and Xavier Draye. \textbf{A Novel Image Analysis Toolbox Enabling Quantitative Analysis of Root System Architecture.} 2011 Plant Physiology 157 doi:10.1104/pp.111.179895}}}
+
+\newpage
+\input{SR_install}
+\label{install}
+
+\newpage
+
+{\color{coolSection}\section{Quick Start SmartRoot}}
+
+In order to learn how to use SmartRoot, open the different tutorial images inside the software (start with the image quick\_start\_1.tif). To open an image in Smart root, just find it on your computer in the Explorer window (fig. \ref{sr_win}). Follow the instruction on the image to learn how to trace roots.\\
+
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=\linewidth]{SR_windows_1}
+\caption[]{\textbf{SmartRoot different windows}}
+\label{sr_win}
+\end{center}
+\end{figure}
+
+
+%%%%%%%%%%%%%%
+\newpage
+%{\color{coolSection}\section{How to trace a root?}}
+{\color{coolSection}\section{Tracing roots}}
+
+\begin{flushright}
+{\color{coolSection}\textsc{{\Large Manual tracing}}}
+\end{flushright}
+\noindent \fbox{\parbox{\linewidth}{ 
+\begin{enumerate}
+\item Select the {\color{red}Trace} tool
+\item Check {\color{red}Display nodes} and {\color{red}Display axis} in the Layer tab
+\item {\color{red}Click} inside a root to place a node. 
+\item Keep going until the end of the root
+\item {\color{red}Double click} to end the root
+\item Choose a name for the newly created root
+\end{enumerate}}}\\
+\vspace{20pt}
+%
+\begin{flushright}
+{\color{coolSection}\textsc{{\Large Semi-automated tracing}}}
+\end{flushright}
+\noindent \fbox{\parbox{\linewidth}{ 
+\begin{enumerate}
+\item Select the {\color{red}Trace} tool
+\item Check {\color{red}Display nodes} and {\color{red}Display axis} in the Layer tab
+\item Maintain the {\color{red}Alt} key down
+\item {\color{red}Click} inside a root to trace it. 
+\item Choose a name for the newly created root
+\end{enumerate}}}\\
+\vspace{20pt}
+%
+%
+%\newpage
+%{\color{coolSection}\section{How to continue a root?}}
+
+\begin{flushright}
+{\color{coolSection}\textsc{{\Large Manually continuing a root}}}
+\end{flushright}
+\noindent \fbox{\parbox{\linewidth}{ 
+\begin{enumerate}
+\item Select the {\color{red}Trace} tool
+\item Check {\color{red}Display nodes} and {\color{red}Display axis} in the Layer tab
+\item {\color{red}Right click} on the first or last node of an existing root and choose {\color{red}Append node}. 
+\item {\color{red}Click} inside the image to place a new node. 
+\item Keep going until the end of the root
+\item {\color{red}Double click} to end the root
+\end{enumerate}}}
+\vspace{20pt}
+%
+%
+%
+\newpage
+\begin{flushright}
+{\color{coolSection}\textsc{{\Large Automatically continuing a root}}}
+\end{flushright}
+\noindent \fbox{\parbox{\linewidth}{ 
+\begin{enumerate}
+\item Select the {\color{red}Trace} tool
+\item Check {\color{red}Display nodes} and {\color{red}Display axis} in the Layer tab
+\item Hold the {\color{red}Alt} key down
+\item {\color{red}Click} on an existing node and {\color{red}drag} it a bit further. 
+\end{enumerate}}}
+\vspace{20pt}
+%
+%
+%
+%\newpage
+%{\color{coolSection}\section{How to modify roots?}}
+
+\begin{flushright}
+{\color{coolSection}\textsc{{\Large Modifying nodes}}}
+\end{flushright}
+\noindent \fbox{\parbox{\linewidth}{ 
+\vspace{10pt}
+{\color{red}Right click} on an existing node. Choose on of the following action:
+\begin{description}
+\item[Append nodes:] Continue tracing in manual mode 
+\item[Split root:] Split a root in two new roots.
+\item[Remove node:] Remove the selected node.
+\item[Remove all nodes (after):] Discard all node located distal to the selected node.
+\item[Remove all nodes (before):] Discard all node located proximal to the selected node.\\
+\end{description}}}
+\vspace{20pt}
+%
+%
+\begin{flushright}
+{\color{coolSection}\textsc{{\Large Modifying roots}}}
+\end{flushright}
+\noindent \fbox{\parbox{\linewidth}{ 
+\vspace{10pt}
+{\color{red}Right click} inside an existing root. Choose on of the following action:
+\begin{description}
+\item[Bring to front:] Bring the selected root to the front of the list of roots. 
+\item[Send to back:] Send the selected root to the back of the list of roots.
+\item[Find laterals:] Check along the root axis for lateral roots creation. 
+\item[Attach parent root:] Set a parent for the current root.
+\item[Detach parent root:] Remove the relationship between a root and its parent.
+\item[Detach children roots:] Remove the relationship between a root and all its children.
+\item[Rename root:] Change the name of the selected root.
+\item[Delete a root:] Remove the whole root.
+\item[Reverse orientation:] Reverse the root orientation.
+\item[Crop children:] Cut all roots whose first node is within the area of the selected root.
+\end{description}}}\\
+\vspace{20pt}
+
+\newpage
+\begin{flushright}
+{\color{coolSection}\textsc{{\Large Connecting two existing roots}}}
+\end{flushright}
+\noindent \fbox{\parbox{\linewidth}{ 
+\begin{enumerate}
+\item Select the {\color{red}Trace} tool
+\item Check {\color{red}Display nodes} and {\color{red}Display axis} in the Layer tab
+\item {\color{red}Right click} on the first or last node of an existing root and choose {\color{red}Append node}. 
+\item {\color{red}Right click} on the first or last node of an other existing root. 
+\end{enumerate}}}
+\vspace{20pt}
+
+\begin{flushright}
+{\color{coolSection}\textsc{{\Large Escaping the centering mechanism}}}
+\end{flushright}
+\noindent \fbox{\parbox{\linewidth}{ 
+\begin{enumerate}
+\item Select the {\color{red}Trace} tool
+\item Check {\color{red}Display nodes} and {\color{red}Display axis} in the Layer tab
+\item Hold the {\color{red}Control} key down and move a node for a {\color{coolSection}Diameter freeze}
+\item Hold the {\color{red}Shift} key down and move a node for a {\color{coolSection}Align to border}
+\item Combine {\color{red}Control}, {\color{red}Shift} and {\color{red}Alt} keys.
+\end{enumerate}}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+{\color{coolSection}\section{SmartRoot window's tabs}}
+
+\begin{flushright}
+{\color{coolSection}\textsc{{\Large Layers tab}}}
+\end{flushright}
+\noindent \fbox{\parbox{\linewidth}{ 
+\begin{center}
+\begin{tabular}{lp{0.6\linewidth}}
+\multirow{2}{*} {\includegraphics[width=0.3\linewidth]{layers}} & \textbf{A.} Type of layers.\\ 
+ & \textbf{B.} Save your preferences.\\  \vspace{45pt}
+\end{tabular}
+\end{center}}}
+\vspace{20pt}
+
+
+\begin{flushright}
+{\color{coolSection}\textsc{{\Large Root list tab}}}
+\end{flushright}
+\noindent \fbox{\parbox{\linewidth}{ 
+\begin{center}
+\begin{tabular}{lp{0.5\linewidth}}
+\multirow{7}{*} {\includegraphics[width=0.4\linewidth]{root_list}} & \textbf{A.} Primary roots, in yellow.\\ 
+ & \textbf{B.} Secondary roots, in green.\\ 
+ & \textbf{C.} Informations about the selected root(s). \\ 
+ & \textbf{D.} Marks of the selected root.\\ 
+ & \textbf{E.} Perform actions on the selected root(s).\\
+ & \textbf{F.} Validate the chosen action.\\ 
+ &\textbf{G.} Refresh the root list \\
+\end{tabular}
+\end{center}
+\begin{center}
+\vspace{65pt}\rule{0.8\linewidth}{1pt}\vspace{15pt}
+\begin{tabular}{p{0.1\linewidth}p{0.8\linewidth}}
+\textbf{Actions:} & Delete root(s) | Delete mark(s) | Rename root\\
+& Attach parent | Detach parent | Detach child(ren) | Find laterals
+\end{tabular}
+\end{center}}}
+\vspace{20pt}
+
+\begin{flushright}
+{\color{coolSection}\textsc{{\Large Linked files tab}}}
+\end{flushright}
+\noindent \fbox{\parbox{\linewidth}{ 
+\begin{center}
+\begin{tabular}{lp{0.5\linewidth}}
+\multirow{2}{*} {\includegraphics[width=0.4\linewidth]{linked_files}} & \textbf{A.} Files to link.\\ 
+ & \textbf{B.} Marks to link.\\  
+ & \textbf{C.} Add a file to the list.\\
+ & \textbf{D.} Refresh the image display.\\
+ & \textbf{E.} Refresh the list display.\\      \vspace{40pt}
+\end{tabular}
+\end{center}}}
+\vspace{20pt}
+
+
+\begin{flushright}
+{\color{coolSection}\textsc{{\Large Data transfers tab}}}
+\end{flushright}
+\noindent \fbox{\parbox{\linewidth}{ 
+\begin{center}
+\begin{tabular}{lp{0.5\linewidth}}
+\multirow{4}{*} {\includegraphics[width=0.4\linewidth]{data_transfers}} & \textbf{A.} List of SmartRoot datasets.\\ 
+ & \textbf{B.} Export to SQL. \\ 
+ & \textbf{C.} Export to CSV\\ 
+ & \textbf{D.} Transfers button.\\ \vspace{40pt} 
+\end{tabular}
+\end{center}
+\begin{center}
+\vspace{20pt}\rule{0.8\linewidth}{1pt}\vspace{15pt}
+\begin{tabular}{p{0.1\linewidth}p{0.8\linewidth}}
+\textbf{Datasets:} & Global Root Data | All marks | Root Nodes | Root Length density\\
+\end{tabular}
+\end{center}}}
+\vspace{20pt}
+
+\begin{flushright}
+{\color{coolSection}\textsc{{\Large Plot tab}}}
+\end{flushright}
+\noindent \fbox{\parbox{\linewidth}{ 
+\begin{center}
+\begin{tabular}{lp{0.6\linewidth}}
+\multirow{5}{*} {\includegraphics[width=0.4\linewidth]{SR_plot}} & \textbf{A.} Histograms.\\ 
+ & \textbf{B.} Charts.\\ 
+ & \textbf{C.} Refresh button. \\ 
+ & \textbf{D.} Close all plots.\\ 
+ & \textbf{E.} Plot the selected charts and histograms.\\ \vspace{35pt}
+\end{tabular}
+\end{center}}}
+\vspace{20pt}
+
+
+\begin{flushright}
+{\color{coolSection}\textsc{{\Large Settings tab}}}
+\end{flushright}
+\noindent \fbox{\parbox{\linewidth}{ 
+\begin{center}
+\begin{tabular}{lp{0.6\linewidth}}
+\multirow{5}{*} {\includegraphics[width=0.2\linewidth]{settings}} & \textbf{A.} Image resolution.\\ 
+ & \textbf{B.} Naming options.\\ 
+ & \textbf{C.} SQL options. \\ 
+& \textbf{D.} Lateral finding options. \\ 
+ & \textbf{E.} Thresholding options. \\ \vspace{70pt}
+\end{tabular}
+\end{center}}}
+
+
+
+\end{document}

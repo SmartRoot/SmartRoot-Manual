@@ -1,0 +1,309 @@
+
+
+{\color{coolSection}\section{First steps}}
+
+{\color{coolSubSection}\subsection{System requirement}}
+
+\begin{description}
+\item [Memory:] At least 1024 MB of RAM for a good functioning
+\item [Java:] SmartRoot works with Java 1.5 or higher
+\item [Database (optional):] SmartRoot can export data to .csv text files but also directly into a database. For Windows we present how to setup a MS Access database connection. For Mac OS X and Linux (Ubuntu), we present how to setup a MySQL connection. People who does not have MS Access on Windows can follows similar steps as for Linux and Mac OS to install a MySQL database.
+\end{description}
+
+%%%%%%%%%%%%%%%%%%%%%%
+
+{\color{coolSubSection}\subsection{Installation files}}
+
+\noindent Inside the SmartRootSetup.zip file, you will find the following folders and files:\\
+
+\begin{description}
+\item [SmartRoot Quick Start.pdf] This document. Helps you to quickly install SmartRoot.
+\item[SmartRoot User Guide.pdf] Complete user guide to learn all the SmartRoot functionalities. 
+\item [Quick Start Images folder] Four images to learn how to trace root with SmartRoot. Instructions are written directly on the images.
+\item [SmartRoot folder] The SmartRoot program in itself. Contains four .jar files: Smart\_Root.jar, Image\_Explorer.jar, jcommon-1.0.16.jar, jfreechart-1.0.13.jar and mysql-connector-java-5.1.7-bin.jar. This is the folder you will have to copy in the ImageJ folder (see below).
+\end{description}
+
+%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+{\color{coolSection}\section{Windows installation}}
+
+\begin{enumerate}
+\item Configure the database (optional)
+\item Install ImageJ and SmartRoot
+\item Use the Quick start images
+\end{enumerate}
+
+%{\color{coolSubSection}\subsection{Java 1.5 installation}}
+%
+%Download Java 1.5 from the following page (choose the Java Runtime Environment (JRE) 5.0 Update 22) and install it.\\
+%
+%\noindent \fbox{\parbox{\linewidth}{\url{http://java.sun.com/javase/downloads/index_jdk5.jsp}}}\\ 
+
+{\color{coolSubSection}\subsection{Database installation and connection}}
+\label{dbwin}
+
+\noindent To configure an ODBC data source that connects SmartRoot to a MS Access database:\\
+
+\begin{enumerate}
+\item Close the ImageJ program if it is running
+\item Starts the \verb|ODBC administrator| from the \\ \verb|Control panel > Administrative tools > ODBC administrator|
+\item Under the tab \verb|User DSN|, click \verb|Add…|
+\item A list of database drivers is displayed. Select \verb|Microsoft Access Driver|, and click \verb|Finish|. You may need to contact your DB vendor if the driver is not in that list.
+\item In the next dialog box, specify \verb|SmartRoot| in the \textbf{Data Source Name} field. In the \textbf{Database} area, click \verb|Create| to create a new database. Choose the directory in which you want to create the database, and name it \verb|SmartRoot.mdb| (in the upper left text field).
+\item Click OK to validate and quit the ODBC administrator.\\
+\end{enumerate}
+
+When you launch SmartRoot (see below), the following message is displayed in the Results window of ImageJ if the connexion was successfully established:
+
+\begin{Verbatim}[frame=single, commandchars=+\(\)]
+SQL connection started on ODBC source SmartRoot
+\end{Verbatim}
+
+If the program failed to open the datasource, the message is:
+
+\begin{Verbatim}[frame=single, commandchars=+\(\)]
+The ODBC datasource 'SmartRoot' was not found.
+You will not be able to write to a database.
+\end{Verbatim}
+
+{\color{coolSubSection}\subsection{SmartRoot installation\\}}
+
+\begin{enumerate}
+\item Download and install ImageJ 
+\item Copy the SmartRoot folder in the \verb|Program Files > ImageJ > Plugins| folder.
+\item Open ImageJ and choose \verb|Plugins > SmartRoot > SR Explorer|\\
+\end{enumerate}
+
+\noindent ImageJ download:\\
+
+\noindent\fbox{\parbox{\linewidth}{\url{http://rsbweb.nih.gov/ij/download.html}\\
+\footnotesize{If you do not have Java installed, please choose a version of ImageJ bundled with Java}}}\\\\
+
+\noindent
+\fbox{\parbox{\linewidth}{%
+{\color{red}\textsc{Important:}}\\
+If you are using {\color{coolSection} Windows 7}, all the components you are using together (in our case, Java, ImageJ and Access) have to be build on the same architecture (32bit or 64bit). \\
+\noindent For instance,  if your Access software is 64bit, please choose the {\color{coolSubSection}ImageJ bundled with 64 bit Java} in the ImageJ download page. 
+}}\\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+
+{\color{coolSection}\section{Mac OSX installation}}
+
+\begin{enumerate}
+\item Install and configure MySQL database (optional)
+\item Install ImageJ and SmartRoot
+\item Use the Quick start images
+\end{enumerate}
+
+{\color{coolSubSection}\subsection{MySQL installation and configuration}}
+\label{dbmac}
+
+\subsubsection{Installation}
+Download the latest MySQL version from:\\ 
+
+\noindent \fbox{\parbox{\linewidth}{\url{http://dev.mysql.com/downloads/}}}\\
+
+\noindent
+Open the disk image then install MySQL by double clicking on the \verb|mysql-...-.pkg| icon. \\
+Also install the \verb|MySQLStratupItem.pkg| and \verb|MySQL.prefPane|.\\
+
+\noindent
+Open the \verb|System Preferences>MySQL| and start the MySQL server.
+
+\subsubsection{Configuration}
+
+Download the MySQLWorkbench from the following link and install it \\
+
+\noindent \fbox{\parbox{\linewidth}{\url{http://dev.mysql.com/downloads/workbench}}}\\
+
+\noindent 
+Open the application and click \verb|New Connection|. Fill the fields as follow:\\
+
+\noindent
+\fbox{ \parbox{\linewidth}{%
+\textbf{Connection Name:} choose the name you want (ex: SmartRoot) \\ 
+\textbf{Connection Method:} Standart (TCP/IP)\\
+\textbf{Hostname:} localhost \\ 
+\textbf{Port:} 3306 \\ 
+\textbf{Username:} choose the name you want (ex: root) \\ 
+\textbf{Password:} leave it empty \\ 
+\textbf{Default Schema:} leave it empty }} \\
+
+\noindent
+Open the connection and create a new schema called \verb|SmartRoot| by clicking the '+' sign.\\
+Name the new schema SmartRoot and create it. \\
+Click the \verb|Refresh| button to see your newly created database.
+
+
+{\color{coolSubSection}\subsection{SmartRoot installation \\}}
+
+\begin{enumerate}
+\item Download and install ImageJ 
+\item Copy the SmartRoot folder in the \verb|Applications > ImageJ > Plugins| folder.
+\item Open ImageJ and choose \verb|Plugins > SmartRoot > SR Explorer|\\
+\end{enumerate}
+
+\noindent ImageJ download:\\
+
+\noindent\fbox{\parbox{\linewidth}{\url{http://rsbweb.nih.gov/ij/download.html}}}
+
+\newpage
+{\color{coolSubSection}\subsection{Connect SmartRoot to the database}}
+
+Once you have installed SmartRoot, open it.
+The following message is displayed in the Results window of ImageJ if the connexion was successfully established:\\
+
+\begin{Verbatim}[frame=single, commandchars=+\(\)]
+SQL connection started 
+\end{Verbatim}
+
+\noindent If the program failed to open the datasource, the message is:
+
+\begin{Verbatim}[frame=single, commandchars=+\(\)]
+The specified datasource was not found.
+You will not be able to write to a database.
+\end{Verbatim}
+
+\noindent
+If you see this error message, go in the SmartRoot window, choose the \verb|Settings| tab and find the \verb|SQL options| panel. Fill the fields as follow:\\
+
+\noindent
+\fbox{\parbox{\linewidth}{%
+\textbf{Driver class name:} com.mysql.jdbc.Driver\\
+\textbf{Connection URL:} jdbc:mysql://localhost/SmartRoot\\
+\textbf{Connection user name:} the username you choose previously\\
+\textbf{Connection password:} leave empty }}\\
+	
+\noindent Press the \verb|Save Prefs| then \verb|Restart server| button. You should see the correct message saying the connection started
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+{\color{coolSection}\section[Linux installation]{Linux installation (Ubuntu distribution)}}
+
+\begin{enumerate}
+\item Install MySQL (optional)
+\item Install ImageJ
+\item Install ImageJ and SmartRoot
+\item Configuring the database (optional)
+\item Use the Quick start images
+\end{enumerate}
+
+%{\color{coolSubSection}\subsection{Java 1.5 installation}}
+%
+%In the terminal window type:\\
+%
+%\begin{Verbatim}[frame=single, commandchars=+\(\)]
+%$sudo apt-get install sun-java5-jre
+%\end{Verbatim}
+
+
+{\color{coolSubSection}\subsection{MySQL installation and configuration}}
+\label{dblin}
+
+\subsubsection{Installation}
+
+In the terminal window type:\\
+
+\begin{Verbatim}[frame=single, commandchars=+\(\)]
+$sudo apt-get install mysql-server
+$sudo apt-get install mysql-query-browser
+\end{Verbatim}
+
+\noindent
+While installing, you will be asked to setup username and password for your database connection. Leave the default values.
+
+\subsubsection{Configuration}
+
+Open MySQL Administrator. To connect to the database fill the form as follow:\\
+
+\noindent
+\fbox{\parbox{\linewidth}{%
+\textbf{Server Hostname:} localhost\\
+\textbf{Username:} root\\
+\textbf{Password:} Leave empty}}\\
+
+\noindent
+In the MySQL Administrator window, choose \verb|Catalog| in the left panel. 
+
+\noindent
+In the bottom left panel \verb|Schemata|, right-click and choose \verb|Create Schema|. \\
+Name it \verb|SmartRoot|
+
+
+
+{\color{coolSubSection}\subsection{ImageJ installation}}
+
+\noindent
+In the terminal window type:\\
+
+\begin{Verbatim}[frame=single, commandchars=+\(\)]
+$sudo apt-get install imagej
+\end{Verbatim}
+
+
+
+{\color{coolSubSection}\subsection{SmartRoot installation}}
+
+Copy the \verb|SmartRoot| folder from the \verb|SmartRootSetup| folder you downloaded into the \verb|usr/share/imagej/plugins/| folder\\
+
+\noindent
+In the terminal window type:\\
+
+\begin{footnotesize}
+\begin{Verbatim}[frame=single, commandchars=+\(\)]
+$sudo mv /home/(+color(red)where_you_unzipped)/SmartRootPlug/SmartRoot /usr/share/imagej/plugins
+\end{Verbatim}
+\end{footnotesize}
+
+\noindent To launch SmartRoot open ImageJ and choose \verb|Plugins > SmartRoot > SR Explorer|\\
+
+\noindent
+\fbox{\parbox{\linewidth}{%
+{\color{red}\textsc{Important:}}\\
+Ubuntu use the {\color{coolSubSection}Alt-key} to grab and move windows. SmartRoot use the same key to automatically trace roots. In order to use SmartRoot correctly, you have to change one Ubuntu parameter:\\
+
+\noindent Go to System $>$ Preferences $>$ Windows and set the Movement key to Super.}}\\
+
+
+{\color{coolSubSection}\subsection{Connect SmartRoot to the database}}
+
+Once SmartRoot is installed, open it.
+
+\noindent
+The following message is displayed in the Results window of ImageJ if the connexion was successfully established:\\
+
+\begin{Verbatim}[frame=single, commandchars=+\(\)]
+SQL connection started 
+\end{Verbatim}
+
+\noindent If the program failed to open the datasource, the message is:
+
+\begin{Verbatim}[frame=single, commandchars=+\(\)]
+The specified datasource was not found.
+You will not be able to write to a database.
+\end{Verbatim}
+
+\noindent
+If you see this error message, go in the SmartRoot window, choose the \verb|Settings| tab and find the \verb|SQL options| panel. Fill the fields as follow:\\
+
+\noindent
+\fbox{\parbox{\linewidth}{%
+\textbf{Driver class name:} com.mysql.jdbc.Driver\\
+\textbf{Connection URL:} jdbc:mysql://localhost/SmartRoot\\
+\textbf{Connection user name:} the username you choose previously (default = root)\\
+\textbf{Connection password:} leave empty }}\\
+	
+\noindent
+Press the \verb|Save Prefs| then \verb|Restart server| button. You should see the correct message saying the connection started
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+

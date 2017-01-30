@@ -1,0 +1,22 @@
+\contentsline {section}{\numberline {1}First steps}{2}{section.1}
+\contentsline {subsection}{\numberline {1.1}System requirement}{2}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}Installation files}{2}{subsection.1.2}
+\contentsline {section}{\numberline {2}Windows installation}{3}{section.2}
+\contentsline {subsection}{\numberline {2.1}Database installation and connection}{3}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}SmartRoot installation\\}{3}{subsection.2.2}
+\contentsline {section}{\numberline {3}Mac OSX installation}{4}{section.3}
+\contentsline {subsection}{\numberline {3.1}MySQL installation and configuration}{4}{subsection.3.1}
+\contentsline {subsubsection}{\numberline {3.1.1}Installation}{4}{subsubsection.3.1.1}
+\contentsline {subsubsection}{\numberline {3.1.2}Configuration}{4}{subsubsection.3.1.2}
+\contentsline {subsection}{\numberline {3.2}SmartRoot installation \\}{4}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}Connect SmartRoot to the database}{5}{subsection.3.3}
+\contentsline {section}{\numberline {4}Linux installation}{6}{section.4}
+\contentsline {subsection}{\numberline {4.1}MySQL installation and configuration}{6}{subsection.4.1}
+\contentsline {subsubsection}{\numberline {4.1.1}Installation}{6}{subsubsection.4.1.1}
+\contentsline {subsubsection}{\numberline {4.1.2}Configuration}{6}{subsubsection.4.1.2}
+\contentsline {subsection}{\numberline {4.2}ImageJ installation}{6}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}SmartRoot installation}{6}{subsection.4.3}
+\contentsline {subsection}{\numberline {4.4}Connect SmartRoot to the database}{7}{subsection.4.4}
+\contentsline {section}{\numberline {5}Quick Start SmartRoot}{8}{section.5}
+\contentsline {section}{\numberline {6}Tracing roots}{9}{section.6}
+\contentsline {section}{\numberline {7}SmartRoot window's tabs}{12}{section.7}
